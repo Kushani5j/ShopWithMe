@@ -10,8 +10,8 @@
 		5B6EB1CD2331761A009755F8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6EB1CC23317619009755F8 /* logo.png */; };
 		5B6EB1CF2331811A009755F8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6EB1CE2331811A009755F8 /* Default-568h@2x.png */; };
 		5B6EB1D123321083009755F8 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EB1D023321083009755F8 /* SellViewController.swift */; };
-		5B6EB1D523323B41009755F8 /* ShopWithMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EB1D223323B41009755F8 /* ShopWithMe.xcdatamodeld */; };
 		5B6EB1D7233245A5009755F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6EB1D6233245A5009755F8 /* CoreLocation.framework */; };
+		5B6EB1DA23326996009755F8 /* Model_ShopWithMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EB1D823326996009755F8 /* Model_ShopWithMe.xcdatamodeld */; };
 		8C8F90BBD54DF20E9D761F96 /* Pods_ShopWithMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3302A6C9243BC13B1C3BA3 /* Pods_ShopWithMe.framework */; };
 		CB12BB02232D224000217352 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB12BB01232D224000217352 /* Home.swift */; };
 		CBB6B64C232BEC1700551482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6B64B232BEC1700551482 /* AppDelegate.swift */; };
@@ -30,9 +30,8 @@
 		5B6EB1CC23317619009755F8 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "../../HatchfulExport-All/logo.png"; sourceTree = "<group>"; };
 		5B6EB1CE2331811A009755F8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5B6EB1D023321083009755F8 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
-		5B6EB1D323323B41009755F8 /* ShoppingApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingApp.xcdatamodel; sourceTree = "<group>"; };
-		5B6EB1D423323B41009755F8 /* ShopWithMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShopWithMe.xcdatamodel; sourceTree = "<group>"; };
 		5B6EB1D6233245A5009755F8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5B6EB1D923326996009755F8 /* Model_ShopWithMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model_ShopWithMe.xcdatamodel; sourceTree = "<group>"; };
 		AD9C1D856A484C593C62BD6C /* Pods-ShopWithMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopWithMe.debug.xcconfig"; path = "Target Support Files/Pods-ShopWithMe/Pods-ShopWithMe.debug.xcconfig"; sourceTree = "<group>"; };
 		CB12BB01232D224000217352 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		CBB6B648232BEC1700551482 /* ShopWithMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopWithMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +98,7 @@
 				CBB6B657232BEC1A00551482 /* LaunchScreen.storyboard */,
 				CBB6B65A232BEC1A00551482 /* Info.plist */,
 				5B6EB1D023321083009755F8 /* SellViewController.swift */,
-				5B6EB1D223323B41009755F8 /* ShopWithMe.xcdatamodeld */,
+				5B6EB1D823326996009755F8 /* Model_ShopWithMe.xcdatamodeld */,
 			);
 			path = ShopWithMe;
 			sourceTree = "<group>";
@@ -233,9 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5DE145D232EAB0F0095489B /* CollectionViewCell.swift in Sources */,
-				5B6EB1D523323B41009755F8 /* ShopWithMe.xcdatamodeld in Sources */,
 				CBB6B64E232BEC1700551482 /* ViewController.swift in Sources */,
 				5B6EB1D123321083009755F8 /* SellViewController.swift in Sources */,
+				5B6EB1DA23326996009755F8 /* Model_ShopWithMe.xcdatamodeld in Sources */,
 				CB12BB02232D224000217352 /* Home.swift in Sources */,
 				CBB6B64C232BEC1700551482 /* AppDelegate.swift in Sources */,
 			);
@@ -384,14 +383,18 @@
 			baseConfigurationReference = AD9C1D856A484C593C62BD6C /* Pods-ShopWithMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5739SUN99Z;
 				INFOPLIST_FILE = ShopWithMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MADD.ShopWithMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kushani.shopwithme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -402,14 +405,18 @@
 			baseConfigurationReference = 510D2903D86281F938C97180 /* Pods-ShopWithMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5739SUN99Z;
 				INFOPLIST_FILE = ShopWithMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MADD.ShopWithMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kushani.shopwithme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -439,14 +446,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5B6EB1D223323B41009755F8 /* ShopWithMe.xcdatamodeld */ = {
+		5B6EB1D823326996009755F8 /* Model_ShopWithMe.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5B6EB1D323323B41009755F8 /* ShoppingApp.xcdatamodel */,
-				5B6EB1D423323B41009755F8 /* ShopWithMe.xcdatamodel */,
+				5B6EB1D923326996009755F8 /* Model_ShopWithMe.xcdatamodel */,
 			);
-			currentVersion = 5B6EB1D423323B41009755F8 /* ShopWithMe.xcdatamodel */;
-			path = ShopWithMe.xcdatamodeld;
+			currentVersion = 5B6EB1D923326996009755F8 /* Model_ShopWithMe.xcdatamodel */;
+			path = Model_ShopWithMe.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -19,7 +19,7 @@ class SellViewController: UIViewController, CLLocationManagerDelegate {
         mngr.delegate = self
         mngr.desiredAccuracy = kCLLocationAccuracyBest
         mngr.requestWhenInUseAuthorization()
-        mngr.stopUpdatingLocation()
+        mngr.startUpdatingLocation()
         // Do any additional setup after loading the view.
     }
     
@@ -31,6 +31,45 @@ class SellViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var locationText: UITextField!
+    
+    @IBOutlet weak var desc: UITextView!
+    @IBOutlet weak var titleTextField: UITextField!
+    
+    @IBOutlet weak var priceText: UITextField!
+    @IBOutlet weak var locText: UITextField!
+    
+    @IBOutlet weak var qtyText: UITextField!
+    @IBAction func AddItemBtnTapped(_ sender: UIButton) {
+        
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let toDo = Item(context: context )
+            
+            if let titleText = titleTextField.text {
+                toDo.name = titleText
+                toDo.desc = desc.text
+                toDo.price = priceDo!
+                toDo.qty = qtyDo!
+                toDo.img =  (imgView?.image)!.pngData()
+                toDo.location = locText.text
+            }
+            try? context.save()
+            navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    var qtyDo: Int32? {
+        if let value = qtyText.text ?? nil {
+            return Int32(value)
+        }
+        return 0
+    }
+    
+    var priceDo: Double? {
+        if let value = priceText.text ?? nil {
+            return Double(value)
+        }
+        return 0
+    }
     
     @IBAction func AddPhotoBtn_Tapped(_ sender: Any) {
         let imgPickerController = UIImagePickerController()
@@ -47,6 +86,7 @@ class SellViewController: UIViewController, CLLocationManagerDelegate {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
         imgView.image = image
+        print("img save")
         picker.dismiss(animated: true, completion: nil)
     }
     
@@ -60,7 +100,7 @@ class SellViewController: UIViewController, CLLocationManagerDelegate {
         
         map.setRegion(reg, animated: true)
         self.map.showsUserLocation = true
-        
+        print("Longitude: " + String(loc.coordinate.longitude))
         CLGeocoder().reverseGeocodeLocation(loc) { (MKPlacemark, error) in
             if error != nil
             {
@@ -71,12 +111,15 @@ class SellViewController: UIViewController, CLLocationManagerDelegate {
             {
                 if let place = MKPlacemark?[0]
                 {
-                    self.locationText.text = "\(String(describing: place.thoroughfare)) " + "\(String(describing: place.subThoroughfare))" + "\(String(describing: place.country))"
+                    var locate="\(String(describing: place.thoroughfare)) " + "\(String(describing: place.subThoroughfare))" + "\(String(describing: place.country))"
+                    locate = locate.replacingOccurrences(of: "Optional", with: "").replacingOccurrences(of: "nilOptional", with: "").replacingOccurrences(of: "\"", with: "").replacingOccurrences(of: "(", with: "").replacingOccurrences(of: "nil", with: "").replacingOccurrences(of: ")", with: "/")
+                    print(locate)
+                    self.locationText.text = locate
+                    
+                   
                 }
-            }
         
-    }
-    
+    }    
     
     /*
     // MARK: - Navigation
@@ -89,4 +132,6 @@ class SellViewController: UIViewController, CLLocationManagerDelegate {
     */
 
 }
+    }
+    
 }

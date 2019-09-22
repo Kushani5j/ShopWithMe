@@ -16,6 +16,12 @@ class homeBuy: UIViewController {
     let items = ["Car","House","Laptop","Phone","dog","Cupboard"]
     var displayItems = ["Car","House","Laptop","Phone","dog","Cupboard"]
     
+    let price = [120000.00,5000000.00,100000.00,85000.00,25000.00,8000.00]
+    
+    var displayPrice = [120000.00,5000000.00,100000.00,85000.00,25000.00,8000.00]
+    
+    
+    
     let itemImages: [UIImage] = [
         UIImage(named: "car")!,
         UIImage(named: "house")!,
@@ -53,6 +59,7 @@ extension homeBuy: UICollectionViewDelegate, UICollectionViewDataSource {
         
         cell.label1.text = displayItems[indexPath.item]
         cell.image1.image = displayItemImages[indexPath.item]
+        cell.label2.text = String(displayPrice[indexPath.item])
         return cell
         
     }
@@ -64,6 +71,7 @@ extension homeBuy: UISearchBarDelegate {
         if searchText == "" {
             displayItems = items
             displayItemImages = itemImages
+            displayPrice = price
             self.uiCollection.reloadData()
         } else {
             displayItems = items.filter {$0.contains(searchText)}
