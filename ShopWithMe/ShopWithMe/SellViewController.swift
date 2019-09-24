@@ -10,8 +10,10 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class SellViewController: UIViewController, CLLocationManagerDelegate {
+class SellViewController: UIViewController, CLLocationManagerDelegate,UIImagePickerControllerDelegate{
 
+    @IBOutlet weak var addPhotoBtn: UIButton!
+    
     let mngr = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +22,19 @@ class SellViewController: UIViewController, CLLocationManagerDelegate {
         mngr.desiredAccuracy = kCLLocationAccuracyBest
         mngr.requestWhenInUseAuthorization()
         mngr.startUpdatingLocation()
-        // Do any additional setup after loading the view.
+        
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SellViewController.dismissKeyboard))
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)        // Do any additional setup after loading the view.
     }
-    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -49,7 +61,7 @@ class SellViewController: UIViewController, CLLocationManagerDelegate {
                 toDo.desc = desc.text
                 toDo.price = priceDo!
                 toDo.qty = qtyDo!
-                toDo.img =  (imgView?.image)!.pngData()
+//                toDo.img =  (imgView?.image)!.pngData()
                 toDo.location = locText.text
             }
             try? context.save()
@@ -72,17 +84,18 @@ class SellViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func AddPhotoBtn_Tapped(_ sender: Any) {
-        let imgPickerController = UIImagePickerController()
+        let imagePickerController = UIImagePickerController()
         
-        imgPickerController.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        imagePickerController.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         
-        imgPickerController.sourceType = .camera
-        self.present(imgPickerController, animated: true, completion: nil)
+        imagePickerController.sourceType = .camera
+        self.present(imagePickerController, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        guard let image = info[.originalImage] as? UIImage else {
+        guard let image = info[.originalImage] as? UIImage
+            else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
         imgView.image = image
@@ -100,7 +113,7 @@ class SellViewController: UIViewController, CLLocationManagerDelegate {
         
         map.setRegion(reg, animated: true)
         self.map.showsUserLocation = true
-        print("Longitude: " + String(loc.coordinate.longitude))
+//        print("Longitude: " + String(loc.coordinate.longitude))
         CLGeocoder().reverseGeocodeLocation(loc) { (MKPlacemark, error) in
             if error != nil
             {
@@ -113,7 +126,7 @@ class SellViewController: UIViewController, CLLocationManagerDelegate {
                 {
                     var locate="\(String(describing: place.thoroughfare)) " + "\(String(describing: place.subThoroughfare))" + "\(String(describing: place.country))"
                     locate = locate.replacingOccurrences(of: "Optional", with: "").replacingOccurrences(of: "nilOptional", with: "").replacingOccurrences(of: "\"", with: "").replacingOccurrences(of: "(", with: "").replacingOccurrences(of: "nil", with: "").replacingOccurrences(of: ")", with: "/")
-                    print(locate)
+//                    print(locate)
                     self.locationText.text = locate
                     
                    
