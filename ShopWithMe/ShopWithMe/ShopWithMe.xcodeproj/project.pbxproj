@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B6EB1CF2331811A009755F8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6EB1CE2331811A009755F8 /* Default-568h@2x.png */; };
+		5B6EB1D123321083009755F8 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EB1D023321083009755F8 /* SellViewController.swift */; };
+		5B6EB1D7233245A5009755F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6EB1D6233245A5009755F8 /* CoreLocation.framework */; };
+		5B6EB1DA23326996009755F8 /* Model_ShopWithMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EB1D823326996009755F8 /* Model_ShopWithMe.xcdatamodeld */; };
+		8C8F90BBD54DF20E9D761F96 /* Pods_ShopWithMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3302A6C9243BC13B1C3BA3 /* Pods_ShopWithMe.framework */; };
+		CB12BB02232D224000217352 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB12BB01232D224000217352 /* Home.swift */; };
+		CBB6B64C232BEC1700551482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6B64B232BEC1700551482 /* AppDelegate.swift */; };
+		CBB6B64E232BEC1700551482 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6B64D232BEC1700551482 /* ViewController.swift */; };
+		CBB6B651232BEC1700551482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB6B64F232BEC1700551482 /* Main.storyboard */; };
+		CBB6B656232BEC1A00551482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB6B655232BEC1A00551482 /* Assets.xcassets */; };
+		CBB6B659232BEC1A00551482 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB6B657232BEC1A00551482 /* LaunchScreen.storyboard */; };
+		F4FD631A233B410C00D4435B /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD6319233B410C00D4435B /* ItemViewController.swift */; };
+		F4FD631C233B60B500D4435B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD631B233B60B500D4435B /* CartViewController.swift */; };
+		F5DE145D232EAB0F0095489B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DE145C232EAB0F0095489B /* CollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F3302A6C9243BC13B1C3BA3 /* Pods_ShopWithMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopWithMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F73CACCBFE56D4C60E7D472 /* Pods-ShoppingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingApp.release.xcconfig"; path = "Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp.release.xcconfig"; sourceTree = "<group>"; };
+		4E5E67571990C07599F06CDC /* Pods-ShoppingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingApp.debug.xcconfig"; path = "Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		510D2903D86281F938C97180 /* Pods-ShopWithMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopWithMe.release.xcconfig"; path = "Target Support Files/Pods-ShopWithMe/Pods-ShopWithMe.release.xcconfig"; sourceTree = "<group>"; };
+		5B6EB1CE2331811A009755F8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5B6EB1D023321083009755F8 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
+		5B6EB1D6233245A5009755F8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5B6EB1D923326996009755F8 /* Model_ShopWithMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model_ShopWithMe.xcdatamodel; sourceTree = "<group>"; };
+		AD9C1D856A484C593C62BD6C /* Pods-ShopWithMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopWithMe.debug.xcconfig"; path = "Target Support Files/Pods-ShopWithMe/Pods-ShopWithMe.debug.xcconfig"; sourceTree = "<group>"; };
+		CB12BB01232D224000217352 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		CBB6B648232BEC1700551482 /* ShopWithMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopWithMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB6B64B232BEC1700551482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBB6B64D232BEC1700551482 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CBB6B650232BEC1700551482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBB6B655232BEC1A00551482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBB6B658232BEC1A00551482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBB6B65A232BEC1A00551482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4FD6319233B410C00D4435B /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		F4FD631B233B60B500D4435B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		F5DE145C232EAB0F0095489B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBB6B645232BEC1700551482 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B6EB1D7233245A5009755F8 /* CoreLocation.framework in Frameworks */,
+				8C8F90BBD54DF20E9D761F96 /* Pods_ShopWithMe.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32AD5E541F10776D7C56B0D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B6EB1D6233245A5009755F8 /* CoreLocation.framework */,
+				0F3302A6C9243BC13B1C3BA3 /* Pods_ShopWithMe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBB6B63F232BEC1700551482 = {
+			isa = PBXGroup;
+			children = (
+				5B6EB1CE2331811A009755F8 /* Default-568h@2x.png */,
+				CBB6B64A232BEC1700551482 /* ShopWithMe */,
+				CBB6B649232BEC1700551482 /* Products */,
+				CBBC48377E217FD25719E76A /* Pods */,
+				32AD5E541F10776D7C56B0D4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CBB6B649232BEC1700551482 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBB6B648232BEC1700551482 /* ShopWithMe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBB6B64A232BEC1700551482 /* ShopWithMe */ = {
+			isa = PBXGroup;
+			children = (
+				CBB6B64B232BEC1700551482 /* AppDelegate.swift */,
+				CB12BB01232D224000217352 /* Home.swift */,
+				CBB6B64D232BEC1700551482 /* ViewController.swift */,
+				CBB6B64F232BEC1700551482 /* Main.storyboard */,
+				F5DE145C232EAB0F0095489B /* CollectionViewCell.swift */,
+				CBB6B655232BEC1A00551482 /* Assets.xcassets */,
+				CBB6B657232BEC1A00551482 /* LaunchScreen.storyboard */,
+				CBB6B65A232BEC1A00551482 /* Info.plist */,
+				5B6EB1D023321083009755F8 /* SellViewController.swift */,
+				5B6EB1D823326996009755F8 /* Model_ShopWithMe.xcdatamodeld */,
+				F4FD6319233B410C00D4435B /* ItemViewController.swift */,
+				F4FD631B233B60B500D4435B /* CartViewController.swift */,
+			);
+			path = ShopWithMe;
+			sourceTree = "<group>";
+		};
+		CBBC48377E217FD25719E76A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E5E67571990C07599F06CDC /* Pods-ShoppingApp.debug.xcconfig */,
+				1F73CACCBFE56D4C60E7D472 /* Pods-ShoppingApp.release.xcconfig */,
+				AD9C1D856A484C593C62BD6C /* Pods-ShopWithMe.debug.xcconfig */,
+				510D2903D86281F938C97180 /* Pods-ShopWithMe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBB6B647232BEC1700551482 /* ShopWithMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBB6B65D232BEC1A00551482 /* Build configuration list for PBXNativeTarget "ShopWithMe" */;
+			buildPhases = (
+				6C9E02532D5AB70AE68A006A /* [CP] Check Pods Manifest.lock */,
+				CBB6B644232BEC1700551482 /* Sources */,
+				CBB6B645232BEC1700551482 /* Frameworks */,
+				CBB6B646232BEC1700551482 /* Resources */,
+				16D85B8A6F3E8CF394C431CD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShopWithMe;
+			productName = ShoppingApp;
+			productReference = CBB6B648232BEC1700551482 /* ShopWithMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBB6B640232BEC1700551482 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Kushani Jayawardane";
+				TargetAttributes = {
+					CBB6B647232BEC1700551482 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = CBB6B643232BEC1700551482 /* Build configuration list for PBXProject "ShopWithMe" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBB6B63F232BEC1700551482;
+			productRefGroup = CBB6B649232BEC1700551482 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBB6B647232BEC1700551482 /* ShopWithMe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBB6B646232BEC1700551482 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBB6B659232BEC1A00551482 /* LaunchScreen.storyboard in Resources */,
+				CBB6B656232BEC1A00551482 /* Assets.xcassets in Resources */,
+				5B6EB1CF2331811A009755F8 /* Default-568h@2x.png in Resources */,
+				CBB6B651232BEC1700551482 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16D85B8A6F3E8CF394C431CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShopWithMe/Pods-ShopWithMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShopWithMe/Pods-ShopWithMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShopWithMe/Pods-ShopWithMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C9E02532D5AB70AE68A006A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShopWithMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBB6B644232BEC1700551482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4FD631A233B410C00D4435B /* ItemViewController.swift in Sources */,
+				F5DE145D232EAB0F0095489B /* CollectionViewCell.swift in Sources */,
+				CBB6B64E232BEC1700551482 /* ViewController.swift in Sources */,
+				5B6EB1D123321083009755F8 /* SellViewController.swift in Sources */,
+				F4FD631C233B60B500D4435B /* CartViewController.swift in Sources */,
+				5B6EB1DA23326996009755F8 /* Model_ShopWithMe.xcdatamodeld in Sources */,
+				CB12BB02232D224000217352 /* Home.swift in Sources */,
+				CBB6B64C232BEC1700551482 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CBB6B64F232BEC1700551482 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBB6B650232BEC1700551482 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CBB6B657232BEC1A00551482 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBB6B658232BEC1A00551482 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBB6B65B232BEC1A00551482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBB6B65C232BEC1A00551482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBB6B65E232BEC1A00551482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD9C1D856A484C593C62BD6C /* Pods-ShopWithMe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5739SUN99Z;
+				INFOPLIST_FILE = ShopWithMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kushani.shopwithme;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBB6B65F232BEC1A00551482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 510D2903D86281F938C97180 /* Pods-ShopWithMe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5739SUN99Z;
+				INFOPLIST_FILE = ShopWithMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kushani.shopwithme;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBB6B643232BEC1700551482 /* Build configuration list for PBXProject "ShopWithMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBB6B65B232BEC1A00551482 /* Debug */,
+				CBB6B65C232BEC1A00551482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBB6B65D232BEC1A00551482 /* Build configuration list for PBXNativeTarget "ShopWithMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBB6B65E232BEC1A00551482 /* Debug */,
+				CBB6B65F232BEC1A00551482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5B6EB1D823326996009755F8 /* Model_ShopWithMe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5B6EB1D923326996009755F8 /* Model_ShopWithMe.xcdatamodel */,
+			);
+			currentVersion = 5B6EB1D923326996009755F8 /* Model_ShopWithMe.xcdatamodel */;
+			path = Model_ShopWithMe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CBB6B640232BEC1700551482 /* Project object */;
+}
