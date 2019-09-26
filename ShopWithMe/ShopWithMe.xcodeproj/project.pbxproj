@@ -18,7 +18,8 @@
 		CBB6B651232BEC1700551482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB6B64F232BEC1700551482 /* Main.storyboard */; };
 		CBB6B656232BEC1A00551482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB6B655232BEC1A00551482 /* Assets.xcassets */; };
 		CBB6B659232BEC1A00551482 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB6B657232BEC1A00551482 /* LaunchScreen.storyboard */; };
-		F400593A233A9401005DA2D7 /* ItemViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4005939233A9401005DA2D7 /* ItemViewerViewController.swift */; };
+		F4FD631A233B410C00D4435B /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD6319233B410C00D4435B /* ItemViewController.swift */; };
+		F4FD631C233B60B500D4435B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD631B233B60B500D4435B /* CartViewController.swift */; };
 		F5DE145D232EAB0F0095489B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DE145C232EAB0F0095489B /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +41,8 @@
 		CBB6B655232BEC1A00551482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB6B658232BEC1A00551482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBB6B65A232BEC1A00551482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4005939233A9401005DA2D7 /* ItemViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewerViewController.swift; sourceTree = "<group>"; };
+		F4FD6319233B410C00D4435B /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		F4FD631B233B60B500D4435B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		F5DE145C232EAB0F0095489B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +100,8 @@
 				CBB6B65A232BEC1A00551482 /* Info.plist */,
 				5B6EB1D023321083009755F8 /* SellViewController.swift */,
 				5B6EB1D823326996009755F8 /* Model_ShopWithMe.xcdatamodeld */,
-				F4005939233A9401005DA2D7 /* ItemViewerViewController.swift */,
+				F4FD6319233B410C00D4435B /* ItemViewController.swift */,
+				F4FD631B233B60B500D4435B /* CartViewController.swift */,
 			);
 			path = ShopWithMe;
 			sourceTree = "<group>";
@@ -230,10 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FD631A233B410C00D4435B /* ItemViewController.swift in Sources */,
 				F5DE145D232EAB0F0095489B /* CollectionViewCell.swift in Sources */,
 				CBB6B64E232BEC1700551482 /* ViewController.swift in Sources */,
-				F400593A233A9401005DA2D7 /* ItemViewerViewController.swift in Sources */,
 				5B6EB1D123321083009755F8 /* SellViewController.swift in Sources */,
+				F4FD631C233B60B500D4435B /* CartViewController.swift in Sources */,
 				5B6EB1DA23326996009755F8 /* Model_ShopWithMe.xcdatamodeld in Sources */,
 				CB12BB02232D224000217352 /* Home.swift in Sources */,
 				CBB6B64C232BEC1700551482 /* AppDelegate.swift in Sources */,

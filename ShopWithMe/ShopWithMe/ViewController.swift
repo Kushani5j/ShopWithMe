@@ -73,6 +73,9 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    
+    
     @IBAction func btnOption(_ sender: Any) {
         
         let opt = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
@@ -97,8 +100,7 @@ class ViewController: UIViewController {
         signUpBtn.layer.cornerRadius = 5
             // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+       
 }
 }
 

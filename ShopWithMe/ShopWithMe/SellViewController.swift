@@ -9,8 +9,9 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
-class SellViewController: UIViewController, CLLocationManagerDelegate,UIImagePickerControllerDelegate{
+class SellViewController: UIViewController, CLLocationManagerDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet weak var addPhotoBtn: UIButton!
     
@@ -29,7 +30,7 @@ class SellViewController: UIViewController, CLLocationManagerDelegate,UIImagePic
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
         
-        view.addGestureRecognizer(tap)        // Do any additional setup after loading the view.
+        view.addGestureRecognizer(tap)
     }
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
@@ -37,11 +38,14 @@ class SellViewController: UIViewController, CLLocationManagerDelegate,UIImagePic
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        priceText.keyboardType = .asciiCapableNumberPad
+        qtyText.keyboardType = .asciiCapableNumberPad
     }
 
     
     @IBOutlet weak var map: MKMapView!
-    @IBOutlet weak var imgView: UIImageView!
+
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var locationText: UITextField!
     
     @IBOutlet weak var desc: UITextView!
@@ -51,39 +55,58 @@ class SellViewController: UIViewController, CLLocationManagerDelegate,UIImagePic
     @IBOutlet weak var locText: UITextField!
     
     @IBOutlet weak var qtyText: UITextField!
+    
+    var itemImage: UIImage?
+    var latitude: Double?
+    var longitude: Double?
+  
     @IBAction func AddItemBtnTapped(_ sender: UIButton) {
-        
-        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-            let toDo = Item(context: context )
+
+        if  !self.titleTextField.text!.isEmpty && !self.priceText.text!.isEmpty && !self.qtyText.text!.isEmpty && !self.desc.text!.isEmpty && !self.imageView.image!.isProxy() && !self.locationText.text!.isEmpty
+        {
+            var imageData: Data?
             
-            if let titleText = titleTextField.text {
-                toDo.name = titleText
-                toDo.desc = desc.text
-                toDo.price = priceDo!
-                toDo.qty = qtyDo!
-//                toDo.img =  (imgView?.image)!.pngData()
-                toDo.location = locText.text
+            print("image!!!!!!")
+            
+            if let itemImage = itemImage {
+                imageData = itemImage.jpegData(compressionQuality: 0.5)
             }
-            try? context.save()
-            navigationController?.popViewController(animated: true)
+            
+            let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "Item", in: context)
+            
+            let items = Item(entity: entity!, insertInto: context)
+            items.name = titleTextField.text
+            items.price = Double(priceText.text!)!
+            items.desc = desc.text
+            items.location = locationText.text
+            items.img = imageData  
+            items.qty = Int32(qtyText.text!)!
+            items.latitude = latitude!
+            items.longitude = longitude!
+            
+            try!  context.save()
+            
+            titleTextField.text = ""
+            priceText.text = ""
+            priceText.text = ""
+            qtyText.text = ""
+            desc.text = ""
+            imageView.image = nil
         }
+            
+        else{
+            let alert = UIAlertController(title: "Warning!", message: "Fill empty fields", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)        }
     }
     
-    var qtyDo: Int32? {
-        if let value = qtyText.text ?? nil {
-            return Int32(value)
-        }
-        return 0
-    }
-    
-    var priceDo: Double? {
-        if let value = priceText.text ?? nil {
-            return Double(value)
-        }
-        return 0
-    }
+
+
     
     @IBAction func AddPhotoBtn_Tapped(_ sender: Any) {
+        
         let imagePickerController = UIImagePickerController()
         
         imagePickerController.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
@@ -98,7 +121,8 @@ class SellViewController: UIViewController, CLLocationManagerDelegate,UIImagePic
             else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
-        imgView.image = image
+        imageView.image = image
+        self.itemImage = image
         print("img save")
         picker.dismiss(animated: true, completion: nil)
     }
@@ -113,6 +137,9 @@ class SellViewController: UIViewController, CLLocationManagerDelegate,UIImagePic
         
         map.setRegion(reg, animated: true)
         self.map.showsUserLocation = true
+        self.latitude = loc.coordinate.latitude
+        self.longitude = loc.coordinate.longitude
+        
 //        print("Longitude: " + String(loc.coordinate.longitude))
         CLGeocoder().reverseGeocodeLocation(loc) { (MKPlacemark, error) in
             if error != nil
@@ -123,8 +150,7 @@ class SellViewController: UIViewController, CLLocationManagerDelegate,UIImagePic
             else
             {
                 if let place = MKPlacemark?[0]
-                {
-                    var locate="\(String(describing: place.thoroughfare)) " + "\(String(describing: place.subThoroughfare))" + "\(String(describing: place.country))"
+                {   var locate="\(String(describing: place.thoroughfare)) " + "\(String(describing: place.subThoroughfare))" + "\(String(describing: place.country))"
                     locate = locate.replacingOccurrences(of: "Optional", with: "").replacingOccurrences(of: "nilOptional", with: "").replacingOccurrences(of: "\"", with: "").replacingOccurrences(of: "(", with: "").replacingOccurrences(of: "nil", with: "").replacingOccurrences(of: ")", with: "/")
 //                    print(locate)
                     self.locationText.text = locate
@@ -132,17 +158,7 @@ class SellViewController: UIViewController, CLLocationManagerDelegate,UIImagePic
                    
                 }
         
-    }    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }
     }
