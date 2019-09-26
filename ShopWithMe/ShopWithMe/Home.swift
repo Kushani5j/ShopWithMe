@@ -17,6 +17,7 @@ class homeBuy: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("aaa")
         self.fetchData()
         //self.dlt()
         //Looks for single or multiple taps.
@@ -98,7 +99,28 @@ extension homeBuy: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
         
     }
+    
+  
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let items = displayItemList[indexPath.row]
+        print("items")
+        print(items as Any)
+        performSegue(withIdentifier: "ItemView", sender: items)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let ItemVC = segue.destination as? ItemViewController {
+            if let items = sender as? Item {
+                ItemVC.selected = items
+                ItemVC.previousVC = self
+            }
+        }
+    }
+
 }
+
+
 
 extension homeBuy: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

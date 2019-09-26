@@ -9,8 +9,10 @@
 import UIKit
 
 class CartViewController: UIViewController {
-
-
+  
+    var prz = ""
+    var nm = " "
+    
     @IBOutlet weak var priceLbl: UILabel!
     
     @IBOutlet weak var QtyLbl: UILabel!
@@ -18,12 +20,31 @@ class CartViewController: UIViewController {
     @IBOutlet weak var accNoText: UITextField!
     @IBOutlet weak var totLbl: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nameTxt.text = nm
+        priceLbl.text = prz
+        totLbl.text = prz
+        
+        stepper.wraps = true
+        stepper.autorepeat = true
+        stepper.maximumValue = 10
+        v = Double(priceDo!)
+        v2 = Double(priceDo2!) // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CartViewController.dismissKeyboard))
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+    }
     @IBAction func checkOut_Tapped(_ sender: Any) {
         let alert = UIAlertController(title: "Successful!", message: "Purchased Successfully", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
+    @IBOutlet weak var nameTxt: UILabel!
     @IBAction func Val_Changed(_ sender: Any) {
         if (sender as AnyObject).selectedSegmentIndex == 0 {
             
@@ -41,20 +62,7 @@ class CartViewController: UIViewController {
     @IBOutlet weak var stepper: UIStepper!
     var v = 0.00;
     var v2 = 0.00;
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        stepper.wraps = true
-        stepper.autorepeat = true
-        stepper.maximumValue = 10
-        v = Double(priceDo!)
-        v2 = Double(priceDo2!) // Do any additional setup after loading the view.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CartViewController.dismissKeyboard))
-        
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-        
-        view.addGestureRecognizer(tap)
-    }
+    
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)

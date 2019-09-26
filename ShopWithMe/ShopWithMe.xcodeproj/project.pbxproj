@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B6EB1CF2331811A009755F8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6EB1CE2331811A009755F8 /* Default-568h@2x.png */; };
 		5B6EB1D123321083009755F8 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EB1D023321083009755F8 /* SellViewController.swift */; };
 		5B6EB1D7233245A5009755F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6EB1D6233245A5009755F8 /* CoreLocation.framework */; };
 		5B6EB1DA23326996009755F8 /* Model_ShopWithMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EB1D823326996009755F8 /* Model_ShopWithMe.xcdatamodeld */; };
@@ -28,7 +27,6 @@
 		1F73CACCBFE56D4C60E7D472 /* Pods-ShoppingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingApp.release.xcconfig"; path = "Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp.release.xcconfig"; sourceTree = "<group>"; };
 		4E5E67571990C07599F06CDC /* Pods-ShoppingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingApp.debug.xcconfig"; path = "Target Support Files/Pods-ShoppingApp/Pods-ShoppingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		510D2903D86281F938C97180 /* Pods-ShopWithMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopWithMe.release.xcconfig"; path = "Target Support Files/Pods-ShopWithMe/Pods-ShopWithMe.release.xcconfig"; sourceTree = "<group>"; };
-		5B6EB1CE2331811A009755F8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5B6EB1D023321083009755F8 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
 		5B6EB1D6233245A5009755F8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5B6EB1D923326996009755F8 /* Model_ShopWithMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model_ShopWithMe.xcdatamodel; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 		CBB6B63F232BEC1700551482 = {
 			isa = PBXGroup;
 			children = (
-				5B6EB1CE2331811A009755F8 /* Default-568h@2x.png */,
 				CBB6B64A232BEC1700551482 /* ShopWithMe */,
 				CBB6B649232BEC1700551482 /* Products */,
 				CBBC48377E217FD25719E76A /* Pods */,
@@ -179,7 +176,6 @@
 			files = (
 				CBB6B659232BEC1A00551482 /* LaunchScreen.storyboard in Resources */,
 				CBB6B656232BEC1A00551482 /* Assets.xcassets in Resources */,
-				5B6EB1CF2331811A009755F8 /* Default-568h@2x.png in Resources */,
 				CBB6B651232BEC1700551482 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

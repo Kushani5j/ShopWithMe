@@ -309,7 +309,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="232.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh3-7E-h34">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh3-7E-h34">
                                                                     <rect key="frame" x="131" y="44" width="29" height="37"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -446,6 +446,7 @@
                     <connections>
                         <outlet property="QtyLbl" destination="sh3-7E-h34" id="u90-8Y-ZEl"/>
                         <outlet property="accNoText" destination="e4a-B1-2lD" id="nT4-bE-wI2"/>
+                        <outlet property="nameTxt" destination="5Qb-rE-PEo" id="IM8-p3-O4W"/>
                         <outlet property="priceLbl" destination="RDI-kc-7Zd" id="ERA-6K-Cxz"/>
                         <outlet property="stepper" destination="Lkm-oP-4Tu" id="czG-Bv-vYf"/>
                         <outlet property="totLbl" destination="Zsc-yu-JHn" id="jRm-HB-HxJ"/>
@@ -617,14 +618,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq8-tb-txf">
-                                        <rect key="frame" x="0.0" y="418" width="355" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="kkkbnjnmklm,knhbyuhijiui bhv  vvg vgfc fcccc tbghb h ygygygygygygygygygygygygy" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="vww-Gm-sZM">
-                                        <rect key="frame" x="0.0" y="445" width="355" height="85"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="kkkbnjnmklm,knhbyuhijiui bhv  vvg vgfc fcccc tbghb h ygygygygygygygygygygygygy" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vww-Gm-sZM">
+                                        <rect key="frame" x="0.0" y="418" width="355" height="112"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="b6B-aY-KCI"/>
                                         </constraints>
@@ -657,6 +652,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xYf-I0-Yzh"/>
                     </view>
+                    <connections>
+                        <outlet property="descText" destination="vww-Gm-sZM" id="eLt-Z2-6oM"/>
+                        <outlet property="nameText" destination="zvX-Kd-SQj" id="1PQ-cO-Alp"/>
+                        <outlet property="priceTxt" destination="0Hj-Ws-yxm" id="ay3-kv-KZV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhl-T7-Jsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
